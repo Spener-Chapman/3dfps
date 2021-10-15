@@ -5,7 +5,7 @@ using UnityEngine;
 public class bullet_despawn : MonoBehaviour
 {
 
-   
+    
     
 
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class bullet_despawn : MonoBehaviour
     {
         if (CompareTag("geometry"))
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
     }
     
