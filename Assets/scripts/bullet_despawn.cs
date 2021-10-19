@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bullet_despawn : MonoBehaviour
 {
-
+    
     
     
 
@@ -19,11 +19,11 @@ public class bullet_despawn : MonoBehaviour
     {
        
     }
-    void OnCollisionEnter()
+    void OnTriggerEnter(Collider other)
     {
-        if (CompareTag("geometry"))
+        if (other.gameObject.tag == "geometry")
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
     
