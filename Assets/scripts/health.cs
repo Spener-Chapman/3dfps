@@ -13,6 +13,7 @@ public class health : MonoBehaviour
     // 1 = tank // maybe make shotgun?
     // 2 = healer
 
+    int playerhealth;
     
 
 
@@ -33,14 +34,22 @@ public class health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        playerhealth = 10;
+
+
         
+        if (playerhealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "bullet")
         {
-
+            playerhealth = (playerhealth - damage[0]);
         }
     }
 }

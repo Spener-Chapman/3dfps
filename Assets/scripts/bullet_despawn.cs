@@ -25,6 +25,10 @@ public class bullet_despawn : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (other.gameObject.tag == "enemy")
+        {
+            Destroy(gameObject);
+        }
     }
     
 }

@@ -21,6 +21,10 @@ public class Player_Controller : MonoBehaviour
 
     public float lookXLimit = 90.0f;
 
+    int maxHealth = 100;
+    int currentHealth;
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +34,8 @@ public class Player_Controller : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
+
+    
 
     // Update is called once per frame
     void Update()

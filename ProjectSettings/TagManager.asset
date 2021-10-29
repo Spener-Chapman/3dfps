@@ -7,6 +7,9 @@ TagManager:
   - geometry
   - bullet
   - enemy
+  - enemy hitbox
+  - door a
+  - door
   layers:
   - Default
   - TransparentFX
