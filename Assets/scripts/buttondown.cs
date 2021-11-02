@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class buttondown : MonoBehaviour
 {
-
-    string door = GameObject
+    public GameObject door; 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +22,10 @@ public class buttondown : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Door()
+            Destroy(door);
+            Destroy(gameObject);
         }
     }
 
-    void Door()
-    {
-        transform.gameObject
-    }
+    
 }
