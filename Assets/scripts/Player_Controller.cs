@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 [RequireComponent(typeof(CharacterController))]
 
 public class Player_Controller : MonoBehaviour
@@ -23,13 +24,16 @@ public class Player_Controller : MonoBehaviour
 
     int maxHealth = 100;
     int currentHealth;
+
     
+
 
 
     // Start is called before the first frame update
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -84,4 +88,5 @@ public class Player_Controller : MonoBehaviour
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         }
     }
+   
 }
